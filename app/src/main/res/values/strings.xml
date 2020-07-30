@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">exercicio 3</string>
+    <string name="valor_em_real">Valor em real</string>
+    <string name="valor_em_dolar">Valor em dolar</string>
+    <string name="valor_em_euro">Valor em euro</string>
+    <string name="euro">€ - euro</string>
+    <string name="dolar">$ - dolar</string>
+    <string name="converter">Converter</string>
+    <string name="Conversor">Conversor</string>
+</resources>

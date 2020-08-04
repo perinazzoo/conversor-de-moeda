@@ -7,12 +7,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText currentRealInput;
     TextView currentDollarValue, currentEuroValue;
-    Button convertButton;
+    Button convertButton, clearButton, devByButton;
 
 
     @Override
@@ -20,28 +21,62 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        EditText currentRealInput;
+
+        final EditText realValue = findViewById(R.id.currentRealInput);
+
+        Button btnConvert = findViewById(R.id.convertButton);
+        Button btnClear = findViewById(R.id.clearButton);
+        Button btnDev = findViewById(R.id.devByButton);
+
+        btnConvert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                reload();
+                return;
+            }
+        });
+        
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                realValue.setText("");
+                reload();
+                return;
+            }
+        });
+
+        btnDev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Gabriel Perinazzo", Toast.LENGTH_SHORT).show();
+                return;
+            }
+        });
+    }
+
+    public void reload() {
+        EditText currentRealInput;
+        TextView currentDollarValue, currentEuroValue;
+        Button convertButton, clearButton;
+
         final EditText realValue = findViewById(R.id.currentRealInput);
 
         final TextView dollarValue = findViewById(R.id.currentDollarValue);
         final TextView euroValue = findViewById(R.id.currentEuroValue);
 
-        Button btnConvert = findViewById(R.id.convertButton);
 
-        btnConvert.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        String stringValue = realValue.getText().toString();
 
-                String stringValue = realValue.getText().toString();
+        if (stringValue.matches("")) {
+            dollarValue.setText("");
+            euroValue.setText("");
+            return;
+        }
 
-                if (stringValue.matches("")) {
-                    return;
-                }
+        Double Value = Double.valueOf(stringValue);
 
-                Double Value = Double.valueOf(stringValue);
-
-                dollarValue.setText(String.format("%.2f", Value / 4));
-                euroValue.setText(String.format("%.2f", Value / 5));
-            }
-        });
+        dollarValue.setText(String.format("%.2f", Value / 4));
+        euroValue.setText(String.format("%.2f", Value / 5));
     }
 }

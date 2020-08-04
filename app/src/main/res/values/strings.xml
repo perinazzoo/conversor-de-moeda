@@ -6,5 +6,7 @@
     <string name="euro">€ - euro</string>
     <string name="dolar">$ - dolar</string>
     <string name="converter">Converter</string>
-    <string name="Conversor">Conversor</string>
+    <string name="Conversor_1_0">Conversor 2.0</string>
+    <string name="desenvolvido_por">Desenvolvido por</string>
+    <string name="limpar">Limpar</string>
 </resources>

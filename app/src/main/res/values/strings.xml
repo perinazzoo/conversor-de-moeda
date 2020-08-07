@@ -6,7 +6,15 @@
     <string name="euro">€ - euro</string>
     <string name="dolar">$ - dolar</string>
     <string name="converter">Converter</string>
-    <string name="Conversor_1_0">Conversor 2.0</string>
+    <string name="Conversor_1_0">Conversor 3.0</string>
     <string name="desenvolvido_por">Desenvolvido por</string>
     <string name="limpar">Limpar</string>
+    <string name="doladolar">Dolar</string>
+    <string name="valor_do_dolar">Valor do dolar</string>
+    <string name="valor_do_euro">Valor do euro</string>
+    <string name="euroeuro">Euro</string>
+    <string name="valor_atual_do_dolar">Valor atual do dolar</string>
+    <string name="valor_atual_do_euro">Valor atual do Euro</string>
+    <string name="valor_em_dolarb">Valor em Dolar</string>
+    <string name="valor_em_eurob">Valor em Euro</string>
 </resources>
